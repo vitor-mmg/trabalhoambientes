@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Candido.Plugins", "Candido.Plugins.csproj", "{BAE960CE-EAF6-CFF9-9E5A-FD0203C1C127}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Candido", "Candido.csproj", "{8BC21717-A8CF-55F8-F686-41B786E7ADD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Candido.Editor", "Candido.Editor.csproj", "{745A5254-1AE9-1EC4-1933-21AC3D01A45A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAE960CE-EAF6-CFF9-9E5A-FD0203C1C127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE960CE-EAF6-CFF9-9E5A-FD0203C1C127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE960CE-EAF6-CFF9-9E5A-FD0203C1C127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE960CE-EAF6-CFF9-9E5A-FD0203C1C127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BC21717-A8CF-55F8-F686-41B786E7ADD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BC21717-A8CF-55F8-F686-41B786E7ADD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BC21717-A8CF-55F8-F686-41B786E7ADD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BC21717-A8CF-55F8-F686-41B786E7ADD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{745A5254-1AE9-1EC4-1933-21AC3D01A45A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{745A5254-1AE9-1EC4-1933-21AC3D01A45A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{745A5254-1AE9-1EC4-1933-21AC3D01A45A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{745A5254-1AE9-1EC4-1933-21AC3D01A45A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
