@@ -28,9 +28,10 @@ public class interaction : MonoBehaviour {
             activeMK = true;
         }
     }
-    void OnTriggerEnter(Collider other)
+    public void ChangeMK(bool asd)
     {
-        Destroy(medkit);
+        activeMK = asd;
     }
+    
     
 }

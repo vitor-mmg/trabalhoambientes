@@ -113,6 +113,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
             RotateView();
+            
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
@@ -133,7 +134,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
         public void SetCountText()
         {
-            countText.text = "Health : " + count.ToString();
+            countText.text = "Health : " + health;
             if (count >= 1)
             {
                 winText.text = "You Win caralho!!";
@@ -191,6 +192,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 DisableEffects();
             }
             m_MouseLook.UpdateCursorLock();
+            
         }
         private void PlayJumpSound()
         {
@@ -362,10 +364,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void TakeDamage(float dd)
         {
             health -= dd;
+            SetCountText();
             if (health <= 0.0f)
             {
                 DiePlayerDie();
             }
+        }
+        public void GainHealth(float hp)
+        {
+            health += hp;
+            if (health > 100) health = 100;
+            SetCountText();
         }
     }
 }

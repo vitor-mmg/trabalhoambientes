@@ -59,6 +59,7 @@ public class enemy : MonoBehaviour
             isAttacking = true;
             anim.SetBool("attack_zombu", isAttacking);
             anim.SetBool("move_zombu", false);
+            Debug.Log("asdasd");
         }
     }
 
@@ -76,8 +77,8 @@ public class enemy : MonoBehaviour
     void Attack()
     {
         timer = 0.0f;
-        //FirstPersonController plc = player.GetComponent<FirstPersonController>();
-        //plc.TakeDamage(damage);
+        UnityStandardAssets.Characters.FirstPerson.FirstPersonController plc = player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
+        plc.TakeDamage(damage);
         Debug.Log("AhAH I attakked u prayer");
     }
 
