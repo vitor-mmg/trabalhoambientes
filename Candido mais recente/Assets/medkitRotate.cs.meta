@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: d08ed9596e2b6d94b888cb2852100b41
-timeCreated: 1483630343
+timeCreated: 1484076882
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - activeM: {fileID: 100000, guid: 6e7a44f0558af0345bf808b2ce237317, type: 3}
+  - medkitManager: {fileID: 1522647902669340, guid: 65eb758a99d403f478d29c6685541ae1,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

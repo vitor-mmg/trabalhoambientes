@@ -58,7 +58,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
         private int count;
-        public Text countText;
+        public Text scoreText;
+        public Text healthText;
         public Text winText;
         //public Text LooseText;
         //cod disparo
@@ -77,6 +78,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public float damage;
         //player health
         public float health;
+        public int score;
 
      
         // Use this for initialization
@@ -134,11 +136,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
         public void SetCountText()
         {
-            countText.text = "Health : " + health;
-            if (count >= 1)
+            healthText.text = "Health : " + health;
+            scoreText.text = "Total Eliminations : " + score;
+            if (score >= 10)
             {
-                winText.text = "You Win caralho!!";
-
+                winText.text = "You Survived Long Enough!!";
+                //opçao de restart aqui
             }
         }
         private void PlayLandingSound()
@@ -358,6 +361,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             isFiring = false;
             isKicking = false;
             Destroy(gameObject, 1f);
+            
         }
 
         //take damage
@@ -368,12 +372,23 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (health <= 0.0f)
             {
                 DiePlayerDie();
+                //game over
+                //opçao de restart aqui
             }
         }
         public void GainHealth(float hp)
         {
             health += hp;
             if (health > 100) health = 100;
+            SetCountText();
+        }
+        public float FullHealth()
+        {
+            return health;
+        }
+        public void ScoringLikeAMan(int scr)
+        {
+            score += scr;
             SetCountText();
         }
     }

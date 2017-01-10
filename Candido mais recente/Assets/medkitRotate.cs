@@ -7,6 +7,7 @@ public class medkitRotate : MonoBehaviour {
     GameObject player;
     public GameObject medkitManager;
     interaction a;
+    bool setBool = false;
     // Use this for initialization
     void Start () {
         //medkitManager = GameObject.FindGameObjectWithTag("manager");
@@ -21,12 +22,14 @@ public class medkitRotate : MonoBehaviour {
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        UnityStandardAssets.Characters.FirstPerson.FirstPersonController plc = player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
+        if ((other.CompareTag("Player"))&&(plc.FullHealth()!=100))
         {
-            UnityStandardAssets.Characters.FirstPerson.FirstPersonController plc = player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
+            
             plc.GainHealth(20);
             Debug.Log("COME SOPA, COME!");
             a.ChangeMK(false);
+            Debug.Log("falsinho");
             Destroy(GameObject.FindGameObjectWithTag("packerino"));
             
         }

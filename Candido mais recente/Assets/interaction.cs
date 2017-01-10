@@ -6,12 +6,13 @@ public class interaction : MonoBehaviour {
 
 
     public GameObject medkit;
+    public Transform[] spawnPoints;
     public bool activeMK = false;
     
     // Use this for initialization
     void Start()
     {
-        InvokeRepeating("MedkitSpawner", 5, 5);
+        MedkitSpawner();
     }
 
 
@@ -22,15 +23,16 @@ public class interaction : MonoBehaviour {
 
     void MedkitSpawner()
     {
+        int index = Random.Range(0, spawnPoints.Length);
         if (!activeMK)
         {
-            Instantiate(medkit, new Vector3(Random.Range(-45f, -40f), 8f, -222f), Quaternion.identity);
+            Instantiate(medkit, spawnPoints[index].position, Quaternion.identity);
             activeMK = true;
         }
     }
-    public void ChangeMK(bool asd)
+    public void ChangeMK(bool qq)
     {
-        activeMK = asd;
+        activeMK = qq;
     }
     
     

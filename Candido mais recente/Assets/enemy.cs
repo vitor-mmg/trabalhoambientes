@@ -88,7 +88,10 @@ public class enemy : MonoBehaviour
         isDead = true;
         isAttacking = false;
         anim.SetBool("Die_Zombie_die", isDead);
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 0.1f);
+        UnityStandardAssets.Characters.FirstPerson.FirstPersonController plc = player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
+        plc.ScoringLikeAMan(1);
+
     }
 
     //take damage
