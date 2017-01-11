@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Candido (1).Plugins", "Candido (1).Plugins.csproj", "{6F33BFC9-8366-657A-E953-501E0502D51D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Candido (1)", "Candido (1).csproj", "{2C4ED38C-ED06-CCCD-3882-54451C5C6FF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Candido (1).Editor", "Candido (1).Editor.csproj", "{5906F74B-D7DF-0F4A-9DE9-D58C672827AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F33BFC9-8366-657A-E953-501E0502D51D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F33BFC9-8366-657A-E953-501E0502D51D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F33BFC9-8366-657A-E953-501E0502D51D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F33BFC9-8366-657A-E953-501E0502D51D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C4ED38C-ED06-CCCD-3882-54451C5C6FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C4ED38C-ED06-CCCD-3882-54451C5C6FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C4ED38C-ED06-CCCD-3882-54451C5C6FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C4ED38C-ED06-CCCD-3882-54451C5C6FF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5906F74B-D7DF-0F4A-9DE9-D58C672827AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5906F74B-D7DF-0F4A-9DE9-D58C672827AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5906F74B-D7DF-0F4A-9DE9-D58C672827AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5906F74B-D7DF-0F4A-9DE9-D58C672827AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
