@@ -82,6 +82,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public float health;
         public int score;
         public float endTimer = 0;
+        public AudioSource shootsource;
+        public AudioSource candidosource;
+        public AudioClip firesound;
      
         // Use this for initialization
         private void Start()
@@ -95,6 +98,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_NextStep = m_StepCycle / 2f;
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
+            shootsource = GameObject.FindGameObjectWithTag("wep").GetComponent<AudioSource>();
+            candidosource = GameObject.FindGameObjectWithTag("flashlight").GetComponent<AudioSource>();
             m_MouseLook.Init(transform, m_Camera.transform);
             count = 0;
             SetCountText();
@@ -256,6 +261,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (Input.GetMouseButton(0) && timer >= timeBetweenBullets)//left button pressed
             {
                 isFiring = true;
+                shootsource.clip = firesound;
+                shootsource.PlayOneShot(shootsource.clip);
             }
             else
             {
@@ -405,11 +412,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             score += scr;
             SetCountText();
             int n = Random.Range(0, candidoJaTas.Length);
-            m_AudioSource.clip = candidoJaTas[n];
-            m_AudioSource.PlayOneShot(m_AudioSource.clip);
+            candidosource.clip = candidoJaTas[n];
+            candidosource.PlayOneShot(candidosource.clip);
             // move picked sound to index 0 so it's not picked next time
             candidoJaTas[n] = candidoJaTas[0];
-            candidoJaTas[0] = m_AudioSource.clip;
+            candidoJaTas[0] = candidosource.clip;
         }
     }
 }
