@@ -84,7 +84,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public float endTimer = 0;
         public AudioSource shootsource;
         public AudioSource candidosource;
+        public AudioSource ambiente;
         public AudioClip firesound;
+        public AudioClip music;
      
         // Use this for initialization
         private void Start()
@@ -100,6 +102,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource = GetComponent<AudioSource>();
             shootsource = GameObject.FindGameObjectWithTag("wep").GetComponent<AudioSource>();
             candidosource = GameObject.FindGameObjectWithTag("flashlight").GetComponent<AudioSource>();
+            ambiente = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
+            ambiente.Play();
             m_MouseLook.Init(transform, m_Camera.transform);
             count = 0;
             SetCountText();
