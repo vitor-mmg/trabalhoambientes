@@ -87,6 +87,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public AudioSource ambiente;
         public AudioClip firesound;
         public AudioClip music;
+        public Image hurt;
+        public Color flashColor = new Color(1f, 0f, 0f, 0.2f);
+        public float flashSpeed = 5f;
      
         // Use this for initialization
         private void Start()
@@ -131,6 +134,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 SceneManager.LoadScene(0);
             }
+            hurt.color = Color.Lerp(hurt.color, Color.clear, flashSpeed * Time.deltaTime);
             if(score >= 10) endTimer += Time.deltaTime;
             if (endTimer >= 2.5f) SceneManager.LoadScene(0);
             // the jump state needs to read here to make sure it is not missed
@@ -389,6 +393,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         //take damage
         public void TakeDamage(float dd)
         {
+            hurt.color = flashColor;
             health -= dd;
             SetCountText();
             if (health <= 0.0f)
